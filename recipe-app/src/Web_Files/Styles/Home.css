@@ -1,0 +1,188 @@
+/* Glutten Font */
+.gluten-font {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+.gluten-font a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+.logo-text {
+    display: inline;
+    color: white;
+    letter-spacing: -5px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    margin: 0px;
+}
+.header-background {
+    background-color: #BC3737;
+    margin: 0px;
+}
+.header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: left;
+}
+.logo {
+    display: inline;
+    /* padding-top: 20px; */
+    margin: 0px 10px 0px 15%;
+}
+
+.position-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.credit-text {
+    display: inline-block;
+    color: white;
+    background-color: #16161990;
+    margin: 0px;
+    margin-left: 5%;
+
+}
+.credit-text a {
+    color: #1b8dfe;
+}
+
+/* Desktop View */
+@media screen and (min-width: 600px) and (max-width: 8000px) {
+    /* Background Image */
+    .background-image {
+        background: linear-gradient(rgba(0 0 0 / 40%), rgba(0 0 0 /40%)), url(../../images/platter_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 1200px;
+        background-blend-mode: darken;
+        padding: 40px 0px;
+    }
+    /* Logo formating */
+    .logo {
+        display: inline;
+        margin: 0px 10px 0px 15%;
+    }
+}
+/* Tablet View */
+@media screen and (min-width: 600px) and (max-width: 800px){
+
+        /* Background Image */
+        .background-image {
+            background: linear-gradient(rgba(0 0 0 / 40%), rgba(0 0 0 /40%)), url(../../images/platter_1280.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 1490px;
+            background-blend-mode: darken;
+            padding: 40px 0px;
+        }
+        /* Logo formating */
+        .logo {
+            display: inline;
+            margin: 0px 10px 0px 15%;
+        }
+}
+
+/* Tablet-Mobile View */
+@media screen and (min-width: 0px) and (max-width: 600px){
+    /* Mobile Background Image */
+    .background-image-mobile {
+        background: linear-gradient(rgba(0 0 0 / 40%), rgba(0 0 0 /40%)), url(../../images/platter_640.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: darken;
+        padding: 20px 0px;
+    }
+    /* Logo formating */
+    .logo {
+        display: inline;
+        margin: 0px 10px 0px 1%;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Footer */
+.footer-background {
+    background-color: #161619;
+    margin: 0px;
+    padding: 2% 10%;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    color: rgb(230, 230, 230);
+}
+.footer-category {
+    margin: 0px 30px;
+}
+.footer-category ul, .footer-category li {
+    list-style-type: none;
+    padding-left: 0px;
+}
+.footer-category a, .footer-category Link {
+    display: block;
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    margin: 10px 0px;
+}
+.footer-category a:hover, .footer-category link:hover {
+    text-decoration: underline;
+}
+@media screen and (min-width: 0px) and (max-width: 800px){
+    .footer-container {
+        justify-content: center;
+    }
+    .footer-category {
+        margin: 0px 80px;
+    }
+}
+
+/* About Me  */
+.page-background {
+    background-color: #9F9F9F;
+}
+.page-content {
+    width: 80%;
+    margin: 0% 5%;
+    padding: 4% 5%;
+    background-color: #FFF5E6;
+}
+@media screen and (min-width: 0px) and (max-width: 780px){
+    .recipe-content {
+        width: 96%;
+        padding: 4% 2%;
+        margin: 0px;
+    }
+}
+.about-bold {
+    font-weight: 700;
+    margin-left: 22px;
+}
+.about-see-more {
+    display: inline-block;
+    margin-right: -10px;
+    color: red;
+}
+.see-more-text {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.section-heading {
+    font-weight: 700;
+    margin: 24px 0px;
+}
+.section-sub-heading {
+    font-weight: 700;
+    margin: 4px 0px;
+}

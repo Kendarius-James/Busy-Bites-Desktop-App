@@ -1,0 +1,96 @@
+.recipe-background {
+    background-color: #9F9F9F;
+}
+.recipe-content {
+    width: 80%;
+    margin: 0% 5%;
+    padding: 4% 5%;
+    background-color: #FFF5E6;
+}
+.recipe-text {
+    margin: 0px;
+}
+.cuisine-name-expanded {
+    color: #947100;
+    margin: -6px 0px;
+}
+.source-expanded {
+    margin-bottom: 30px;
+}
+.recipe-image {
+    width: 650px;
+    height: 440px;
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 0px) and (max-width: 780px){
+    .recipe-content {
+        width: 96%;
+        padding: 4% 2%;
+        margin: 0px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 780px) {
+    .recipe-image {
+        width: 480px;
+        height: 360px;
+    }
+}
+@media screen and (min-width: 390px) and (max-width: 600px) {
+    .recipe-image {
+        width: 312px;
+        height: 231px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 390px) {
+    .recipe-image {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+/* Recipe Box contents */
+.box-top {
+    width: 60%;
+    background-color: #ffffff;
+    padding: 2%;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+}
+.time-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 0px 2%;
+    border: 1px solid black;
+}
+.time-box h5 {
+    margin: 0px;
+}
+.time-box span {
+    display: block;
+    padding: 10px;
+}
+span strong {
+    display: block;
+}
+
+/* Ingredienet list */
+.ingredient-container, .diet-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ingredient, .diet {
+    width: 25vw;
+    padding-right: 10px;
+}
+
+/* Bolding of the step time */
+.step-time {
+    font-weight: 700;
+    display: block;
+}
+.recipe-step {
+    margin: 20px 0px;
+}

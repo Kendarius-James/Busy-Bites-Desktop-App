@@ -1,0 +1,89 @@
+.results-label {
+    padding: 10px 0px 10px 80px;
+    margin: 0px;
+    background-color: #FFD8A6;
+    border: 2px solid black;
+}
+@media screen and (min-width: 700px) and (max-width: 8000px){
+    .results-body {
+        background-color: #FFF5E6;
+        padding: 4px 0px 40vh 70px;
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .results-body-no-results {
+        background-color: #FFF5E6;
+        padding: 4px 0px 100vh 20px;
+        margin: 0px;
+    }
+}
+.card {
+    width: 300px;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 10px;
+    box-shadow: 10px 5px 5px #d8d0c3;
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .results-body-mobile {
+        background-color: #FFF5E6;
+        padding: 4px 0px 40vh 0px;
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .results-body-mobile-no-results {
+        background-color: #FFF5E6;
+        padding: 4px 0px 60vh 20px;
+        margin: 0px;
+    }
+}
+    
+.remove-button-display:hover {
+    background-color: transparent;
+}
+.remove-button-display {
+    padding: 0px;
+    /* border: none; */
+    background-color: transparent;
+}
+.card:hover .card-body, .card:hover .card-image {
+        background-color: #f1f1f1;
+        cursor: pointer;
+}
+.card-body {
+    background-color: #FFFFFF;
+    height: 144px;
+    width: auto;
+}
+.cuisine-title {
+    color: #947100;
+    margin: 0px;
+}
+.cuisine-title, .recipe-title {
+    margin-left: 10px;
+}
+.recipe-title {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    margin: 10px 0px 6% 0px;
+}
+.prep-time, .cook-time {
+    width: 50%;
+    font-weight: bold;
+}
+.prep-time {
+    margin: 0px 40px 0px 5px;
+}
+.error-message {
+    margin:  10px 2px;
+    padding: 2px;
+    color: black;
+    background-color: rgb(255, 203, 203);
+    border: 2px solid red;
+}

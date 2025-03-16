@@ -1,0 +1,57 @@
+@media screen and (min-width: 600px) and (max-width: 8000px) {
+    .font-tiny {
+        /* 14 px */
+        font-size: 0.875rem;
+    }
+    .font-small {
+        /* 16 px */
+        font-size: 1rem;
+    }
+    .font-medium {
+        /* 24 px */
+        font-size: 1.5rem;
+    }
+    .font-large {
+        /* 36 px */
+        font-size: 2.25rem;
+    }
+    .font-larger {
+        /* 48 px */
+        font-size: 3rem;
+    }
+    .font-hero-title {
+        /* 64 px */
+        font-size: 4rem;
+    }
+    /* recipe title for recipe cards */
+    .font-recipe-title {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    
+    
+    .font-tiny {
+        /* 12 px */
+        font-size: 0.75rem;
+    }
+    .font-small {
+        /* 14 px */
+        font-size: 0.875rem;
+    }
+    .font-medium {
+        /* 16 px */
+        font-size: 1rem;
+    }
+    .font-large {
+        /* 24 px */
+        font-size: 1.5rem;
+    }
+    .font-larger {
+        /* 36 px */
+        font-size: 2.25rem;
+    }
+    .font-hero-title {
+        font-size: 3rem;
+    }    
+}

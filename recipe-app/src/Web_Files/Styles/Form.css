@@ -1,0 +1,202 @@
+/* Form container */
+.form-width {
+    width: 60%;
+}
+
+.welcome-title, .home-label, .select-label {
+    color: white; 
+    margin-bottom: 8px;  
+}
+
+/* Select Button CSS */
+.select-box {
+    width: 95%;
+    height: 50px;
+    margin: 10px 0px;
+}
+
+.select-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.select-home-formating {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Select hovering background */
+label:hover + select {
+    background-color: #C3C3C8;
+    border-radius: 4px;
+}
+
+/* Search bar css */
+.search-home-form {
+    height: 50px;
+    width: 100%;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* submit and ingredient buttons */
+.ingredient-button, .submit-button {
+    width: 20%;
+    height: 50px;
+}
+.submit-button {
+    margin-top: 80px;
+    margin-left: 80%;
+}
+.ingredient-button {
+    margin: 6px;
+}
+
+/* Mobile and tablet display */
+@media screen and (min-width: 0px) and (max-width: 800px){
+
+    .welcome-title {
+        margin-bottom: 30px;
+    }
+
+    .form-width {
+        width: 90%;
+    }
+
+    .select-container {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .search-home-form {
+        height: 50px;
+        width: 94%;
+        margin: 10px 0px;
+        border: none;
+        border-radius: 4px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 400px){
+    .ingredient-button, .submit-button {
+        width: 28%;
+    }
+    .submit-button {
+        margin-top: 60px;
+        margin-left: 70%;    
+    }
+}
+
+
+/* Ingredient Button display */
+.display-border {
+    background-color: #F5E2AF;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* Errors css */
+.input-error {
+    border: 2px solid red;
+}
+
+.error-message {
+    margin:  10px 2px;
+    padding: 2px;
+    color: black;
+    background-color: rgb(255, 203, 203);
+    border: 2px solid red;
+}
+
+
+/* API Page CSS */
+.title {
+    display: inline;
+}
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-title {
+    margin: 0px;
+}
+.display-heading-line {
+    padding: 10px 0px;
+}
+.display-lines {
+    border: solid black;
+    border-width: 0px;
+    border-width: 2px 0px;
+    padding: 10px 0px;
+}
+.display-empty-lines {
+    border: solid black;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    height: 55.2px;
+    padding: 10px 0px;
+}
+
+.text-color {
+    color: black;
+}
+.text-color h3 {
+    text-align: center;
+}
+
+.api-form-container-details {
+    display: block;
+    padding: 20px;
+    margin: 40px 0px;
+    background-color: #F5E2AF;
+    border-radius: 6px;
+}
+.api-form-container {
+    width: 800px;
+    height: 440px;
+}
+.api-form {
+    margin:20px 0px;
+}
+.api-label {
+    margin: 0px 60px 0px 20px;
+}
+.api-input {
+    height: 50px;
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.legal-checkbox {
+    width: 20px; 
+    height: 20px;
+}
+.legal-formating {
+    margin-left: 24px;
+}
+@media screen and (min-width: 600px) and (max-width: 920px) {
+    .api-form-container {
+        width: 600px;
+        height: 440px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .api-label, .api-input {
+        display: block;
+    }
+    .api-label {
+        margin: 10px 10px;
+    }
+    .api-input {
+        width: 100%;
+    }
+    .api-form-container {
+        width: 300px;
+        height: 440px;
+    }
+    
+}
