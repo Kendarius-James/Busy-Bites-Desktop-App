@@ -5,6 +5,7 @@ import "./Styles/Form.css";
 import "./Styles/Font.css";
 import { Link, useNavigate } from "react-router-dom";
 
+
 export function GetAPIKey() {
     const [api, setApi] = useState("");
     const [appError, setAppError] = useState([]);
@@ -26,6 +27,11 @@ export function GetAPIKey() {
                 const response = await axios.get(url);
                 setJoke(response.data.text);
                 sessionStorage.setItem("ApiKeyStatus", true);
+                // Write api key to .env file
+                console.log("[rd] sending key");
+                window.key.saveEnv({REACT_APP_SPOONACULAR_API_KEY: api});
+                navigate("/home");
+
                 setAppError([]);
             } else {
                 setAppError(["Please agree to the Terms of Service and Privacy Policy."]);
@@ -43,7 +49,15 @@ export function GetAPIKey() {
         if (api === "") {
             setAppError(["The input is empty. Please enter your API Key."]);
         } else {
+            console.log("home");
             fetchJoke(checkbox, api, setAppError, setJoke);
+            if (joke.length > 0 && checkbox === true){
+                // window.key.saveEnv({API_Key: api});
+                // window.key.saveEnv({ API_KEY: api});
+                // ipcRenderer.send('save-env', { API_KEY: api});
+                
+                navigate("/home");
+            }
         }
     }
 
@@ -92,7 +106,7 @@ export function GetAPIKey() {
                             <Link to="/terms-of-use">Terms of Service</Link> and{" "}
                             <Link to="/private-policy">Privacy Policy</Link>.
                         </label>
-                        {joke.length > 0 && checkbox === true ? navigate("/home") : ""}
+                        {/* {joke.length > 0 && checkbox === true ? navigate("/home") : ""} */}
                     </div>
                 </div>
                 <button

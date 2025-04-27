@@ -61,6 +61,7 @@ export function BodyBackground({ FormWindow }) {
             <div className="position-form">
                 <FormWindow/>
             </div>
+            {/* Use IPC for node to open in default browser */}
             <p className="font-medium credit-text">Photo by <a href="https://unsplash.com/@brookecagle?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brooke Cagle</a> on <a href="https://unsplash.com/photos/brown-bread-on-white-textile-0RUlEosIP8Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </p>
         </div>

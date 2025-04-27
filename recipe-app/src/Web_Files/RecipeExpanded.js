@@ -63,6 +63,11 @@ function HeroSection({
     totalTime,
     servings,
 }) {
+    const handleClick = (e, href) => {
+        e.preventDefault();
+        window.openExternal.link(href);
+    }
+
     return (
         <>
             <h2 className="recipe-text font-large cuisine-name-expanded">Cuisine: {cuisineName}</h2>
@@ -70,7 +75,7 @@ function HeroSection({
             <h4 className="recipe-text font-medium source-expanded">
 
                 {/* Insert IPC external default browser here */}
-                By {authorName} at <a href={recipeUrl} target="_blank" rel="noopener noreferrer">
+                By {authorName} at <a href={recipeUrl} onClick={(e) => handleClick(e, recipeUrl)} target="_blank" rel="noopener noreferrer">
                     {authorName}
                 </a>
             </h4>
