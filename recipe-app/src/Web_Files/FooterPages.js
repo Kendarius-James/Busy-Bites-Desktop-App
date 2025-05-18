@@ -191,10 +191,10 @@ export function Terms() {
                     <p>Users are not required to purchase any Spoonacular API plans to access Busy Bites as of December 2, 2024. However, users must create a Spoonacular API account and obtain an API key to use the application. If users choose to purchase a Spoonacular API plan, they are responsible for following Spoonacular's purchase procedures and adhering to their <a href="https://spoonacular.com/food-api/terms">terms and conditions</a>. </p>
                 
                     <li className="section-heading">Modifications and Updates</li>
-                    <p>Busy Bites is a personal project and may be updated, modified, or discontinued at any time without prior notice. Users are encouraged to check for updates periodically to stay informed about changes. (Last terms revision: {termsRevisionDate})</p>
+                    <p>Busy Bites is a personal project and may be updated, modified, or discontinued at any time without prior notice. Users are encouraged to check for updates periodically to stay informed about changes.</p>
                 
                     <li className="section-heading">Contact Information</li>
-                    <p>For questions, concerns, or feedback about Busy Bites, please contact us at [Email Address].</p>
+                    <p>For questions, concerns, or feedback about Busy Bites, please contact us at KendariusJames@protonmail.com.</p>
                 </ol>
             </div>
         );
@@ -252,7 +252,7 @@ export function Privacy() {
                     <p>Busy Bites retains information only for the duration of your current session to display recipes within the application. Once the session ends, all information is deleted. Any information processed or retained by the Spoonacular API is subject to their <a href="https://spoonacular.com/food-api/privacy">Privacy Policy</a>.</p>
 
                     <li className="section-heading">Security</li>
-                    <p>We take reasonable precautions to protect your data from unauthorized access, alteration, or deletion. Busy Bites does not store data beyond the active session, and all previously entered information is deleted upon session termination. While Busy Bites does not process sensitive personal data, we recommend users follow general online security practices. </p>
+                    <p>Busy Bites does not store data beyond the active session, and all previously entered information is deleted upon session termination. While Busy Bites does not process sensitive personal data, we recommend users follow standard online security practices. </p>
                     
                     <li className="section-heading">User Rights</li>
                     <p>Busy Bites does not store personal data beyond the current session and does not process or retain any long-term user information. </p>
@@ -263,10 +263,10 @@ export function Privacy() {
                     <p>For jurisdictions with differing age thresholds under child privacy laws, the applicable local age limit will apply. </p>
 
                     <li className="section-heading">Changes to the Privacy Policy</li>
-                    <p>Busy Bites may update this Privacy Policy often. We will notify you of any significant changes by posting a revised policy on this page with an updated effective date. Please review this policy regularly to stay informed about our privacy practices. Last revision: {privacyRevisedDate}</p>
+                    <p>Busy Bites may update this Privacy Policy often. We will notify you of any significant changes by posting a revised policy on this page with an updated effective date. Please review this policy regularly to stay informed about our privacy practices.</p>
                     
                     <li className="section-heading">Contact Information</li>
-                    <p>If you have any questions, concerns, or feedback about this Privacy Policy or how Busy Bites handles your information, please contact us at: [Email Address]. We value your privacy and will respond promptly to any inquiries. </p>
+                    <p>If you have any questions, concerns, or feedback about this Privacy Policy or how Busy Bites handles your information, please contact us at KendariusJames@protonmail.com. We value your privacy and will respond promptly to any inquiries. </p>
                 </ol>
                 <p></p>
             </div>

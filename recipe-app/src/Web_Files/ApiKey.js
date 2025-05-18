@@ -25,6 +25,7 @@ export function GetAPIKey() {
             if (checkbox === true) {
                 const url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api}`;
                 const response = await axios.get(url);
+                console.log(response);
                 setJoke(response.data.text);
                 sessionStorage.setItem("ApiKeyStatus", true);
                 // Write api key to .env file

@@ -21,6 +21,21 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "build": {
+    "productName": "Busy Bites",
+    "directories": {
+      "buildResources": "media"
+    },
+    "win": {
+      "icon": "media/busy_bites_logo.ico"
+    },
+    "mac": {
+      "icon": "media/busy_bites_logo.icns"
+    },
+    "linux": {
+      "icon": "media/busy_bites_logo.png"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
