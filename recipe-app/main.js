@@ -10,7 +10,7 @@ app.whenReady().then(() => {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
-    icon: path.join(__dirname, 'images', 'busy_bites_logo.png'),
+    icon: path.join(__dirname, 'src', 'images', 'busy_bites_logo.png'),
     webPreferences: {
       nodeIntegration: false, // Security best practice
       contextIsolation: true, // Security best practice
