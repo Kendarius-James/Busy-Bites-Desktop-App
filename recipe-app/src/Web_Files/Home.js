@@ -8,7 +8,7 @@ import React from "react";
 // Home.js stores all forms pages
 
 // API Component template
-export function KeyHome() {
+export default function KeyHome() {
     function APIKey() {
         return (
             <div className="outer-container">

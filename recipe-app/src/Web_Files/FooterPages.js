@@ -75,7 +75,7 @@ export function AboutUs() {
                     with Busy Bites!
                 </p>
 
-                <button onClick={onHandleClick}>Start Cooking Now!</button>
+                <button className="font-small about-button" onClick={onHandleClick}>Start Cooking Now!</button>
 
                 <h2>The Inspiration Behind Busy Bites</h2>
                 <p>
@@ -118,7 +118,6 @@ export function AboutUs() {
                     <li><span className="about-bold">User Feedback at a Glance:</span> Read summaries of what other users think of each dish. </li>
                     <li><span className="about-bold">Step-by-Step Instructions: </span>Follow detailed guides and time estimates for every recipe. </li>
                     <br></br>
-                    <li><span className="about-bold">And More Features Coming Soon! </span></li>
                 </ul>
                 <span className="font-medium about-see-more">*</span>
                 <p className="font-small see-more-text">For your health and safety, we recommend reviewing recipes for allergen information before cooking!</p>

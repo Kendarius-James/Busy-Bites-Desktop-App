@@ -1,13 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { FormDataProvider } from "./Web_Files/SharedData";
-import { Home, KeyHome } from "./Web_Files/Home";
+import { Home } from "./Web_Files/Home";
+import KeyHome from "./Web_Files/Home";
+import { Main } from "./Web_Files/Main";
 import Results from "./Web_Files/RecipeResults";
 import ExpandedResults from "./Web_Files/RecipeExpanded";
 import { Privacy, AboutUs, Terms } from "./Web_Files/FooterPages";
 
 function App() {
     return (
+        <>
         <FormDataProvider>
             <Router>
                 <Routes>
@@ -24,6 +27,7 @@ function App() {
                 </Routes>
             </Router>
         </FormDataProvider>
+        </>
     );
 }
 

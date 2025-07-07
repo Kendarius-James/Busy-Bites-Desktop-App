@@ -157,6 +157,10 @@
     padding: 4% 5%;
     background-color: #FFF5E6;
 }
+.about-button {
+    width: 20%;
+    height: 50px;
+}
 @media screen and (min-width: 0px) and (max-width: 780px){
     .recipe-content {
         width: 96%;

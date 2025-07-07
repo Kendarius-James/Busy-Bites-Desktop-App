@@ -21,13 +21,14 @@ app.whenReady().then(() => {
     },
   });
 
-  const isDev = process.env.NODE_ENV !== "development";
+  // const isDev = process.env.NODE_ENV !== "development";
+  const isDev = false;
 
   // Load React app during development
   if (isDev) {
     mainWindow.loadURL("http://localhost:3000");
   } else {
-    mainWindow.loadURL(`file://${path.join(__dirname, "build", "index.html")}`);
+    mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
   }
 
   // Open tabs in default browser
