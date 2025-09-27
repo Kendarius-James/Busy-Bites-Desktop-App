@@ -60,14 +60,6 @@ sudo apt install npm
 ```
 npm install react react-dom
 ```
-#### If there is an issue with different node versions, install node version manager (nvm) with the following code.
-```
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
-
-nvm install --lts
-nvm use --lts   
-```
 ### 3. Build the react files 
 ```
 cd '/recipe-app'
@@ -79,7 +71,6 @@ cd ..
 npm install electron
 ```
 ### 5. Install Maker for Windows Distributiom
-#### Creates .deb packages (Debian, Ubuntu).
 ```
 npm install --save-dev @electron-forge/maker-squirrel
 ```
