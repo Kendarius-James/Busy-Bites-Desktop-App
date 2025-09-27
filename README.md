@@ -30,3 +30,60 @@ npm run build
 cd ..
 ```
 ### 4. Install Electron 
+```
+npm install electron
+```
+### 5. Install Maker for Chosen Distributiom
+#### Creates .deb packages (Debian, Ubuntu).
+```
+npm install --save-dev @electron-forge/maker-deb 
+```
+#### Creates .rpm packages (Fedora, CentOS).
+```
+npm install --save-dev @electron-forge/maker-rpm
+```
+#### Creates an AppImage.
+```
+npm install --save-dev @electron-forge/maker-appimage
+```
+### 6. Create executable
+```
+npm run make
+```
+
+## Windows Installation Instructions
+### 1. Install node package manager
+```
+sudo apt install npm
+```
+### 2. Install react and react-dom
+```
+npm install react react-dom
+```
+#### If there is an issue with different node versions, install node version manager (nvm) with the following code.
+```
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+
+nvm install --lts
+nvm use --lts   
+```
+### 3. Build the react files 
+```
+cd '/recipe-app'
+npm run build
+cd ..
+```
+### 4. Install Electron 
+```
+npm install electron
+```
+### 5. Install Maker for Windows Distributiom
+#### Creates .deb packages (Debian, Ubuntu).
+```
+npm install --save-dev @electron-forge/maker-squirrel
+```
+### 6. Create executable
+```
+npm run make
+```
