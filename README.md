@@ -1,5 +1,5 @@
 # Busy-Bites-Electron-App
-Busy Bites is a recipe search application using the Spoonacular api. It is designed to search over 1000 recipes tailored to any lifestyle. Built using electron and react, this application can be run on any desktop computer making it a convenient way to search for your recipe needs.
+Busy Bites is a recipe search application using the Spoonacular api. It is designed to search over 4000 recipes tailored to any lifestyle. Built using electron and react, this application can be run on any desktop computer making it a convenient way to search for your recipe needs.
 
 <img width="1447" height="1140" alt="Busy Bites Home" src="https://github.com/user-attachments/assets/71216c36-80af-43f3-a289-b3f65fcd3c7e" />
 
