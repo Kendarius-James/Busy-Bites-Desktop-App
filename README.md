@@ -1,5 +1,5 @@
-# Busy-Bites-Electron-App
-Busy Bites is a recipe search application using the Spoonacular api. It is designed to search over 4000 recipes tailored to any lifestyle. Built using electron and react, this application can be run on any desktop computer making it a convenient way to search for your recipe needs.
+# Busy Bites
+Busy Bites is a recipe search desktop application designed to search over 4000 recipes tailored to any lifestyle. Built using Electron, React and the Spoonacular api, this application can be run on any desktop computer making it a convenient way to search for your recipe needs. 
 
 <img width="1447" height="1140" alt="Busy Bites Home" src="https://github.com/user-attachments/assets/71216c36-80af-43f3-a289-b3f65fcd3c7e" />
 
@@ -7,11 +7,16 @@ Busy Bites is a recipe search application using the Spoonacular api. It is desig
 # How to Install Application
 
 ## Linux Installation Instructions
-### 1. Install node package manager
+### 1. Download the files
+Download the Zip file or git clone below.
+```
+git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
+```
+### 2. Install node package manager
 ```
 sudo apt install npm
 ```
-### 2. Install react and react-dom
+### 3. Install react and react-dom
 ```
 npm install react react-dom
 ```
@@ -23,17 +28,17 @@ source ~/.bashrc
 nvm install --lts
 nvm use --lts   
 ```
-### 3. Build the react files 
+### 4. Build the react files 
 ```
 cd '/recipe-app'
 npm run build
 cd ..
 ```
-### 4. Install Electron 
+### 5. Install Electron 
 ```
 npm install electron
 ```
-### 5. Install Maker for Chosen Distributiom
+### 6. Install Maker for Chosen Distributiom
 #### Creates .deb packages (Debian, Ubuntu).
 ```
 npm install --save-dev @electron-forge/maker-deb 
@@ -46,35 +51,40 @@ npm install --save-dev @electron-forge/maker-rpm
 ```
 npm install --save-dev @electron-forge/maker-appimage
 ```
-### 6. Create executable
+### 7. Create executable
 ```
 npm run make
 ```
 
 ## Windows Installation Instructions
-### 1. Install node package manager
+### 1. Download the files
+Download the Zip file or git clone below.
+```
+git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
+```
+### 2. Install node package manager
 ```
 sudo apt install npm
 ```
-### 2. Install react and react-dom
+### 3. Install react and react-dom
 ```
 npm install react react-dom
 ```
-### 3. Build the react files 
+### 4. Build the react files 
 ```
 cd '/recipe-app'
 npm run build
 cd ..
 ```
-### 4. Install Electron 
+### 5. Install Electron 
 ```
 npm install electron
 ```
-### 5. Install Maker for Windows Distributiom
+### 6. Install Maker for Windows Distributiom
 ```
 npm install --save-dev @electron-forge/maker-squirrel
 ```
-### 6. Create executable
+### 7. Create executable
 ```
 npm run make
 ```
