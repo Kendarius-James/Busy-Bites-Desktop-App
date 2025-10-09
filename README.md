@@ -182,10 +182,7 @@ Individual results of each recipe will vary. Once the application finish retriev
 - 🥗 Recipe data provided by **Spoonacular API**
 - 📸 Home Screen photo by **Brooke Cagle** on **Unsplash**
 
-## Author
-**Kendarius James**  
-📧 Email: KendariusJames@protonmail.com
-
-🌐 Portfolio: [Kendarius James](https://kendarius-james.github.io/index.html)
-
-🐙 GitHub: [@kendarius-james](https://github.com/kendarius-james)
+## ✉️ Contact
+- 📧 Email: KendariusJames@protonmail.com
+- 🌐 Portfolio: [Kendarius James](https://kendarius-james.github.io/index.html)
+- 🐙 GitHub: [@kendarius-james](https://github.com/kendarius-james)
