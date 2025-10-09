@@ -12,56 +12,6 @@ Busy Bites is a recipe search desktop application designed to search over 4000 r
 - Node.js
 - Spoonacular API
 
-# License
-Modified MIT License – Non-Commercial Use Only (MIT-NC)
-Copyright (c) 2025 Kendarius James
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to use,
-copy, modify, merge, publish, and distribute copies of the Software for
-non-commercial purposes only, subject to the following conditions:
-
-1. **Non-Commercial Use Only**
-
-   The Software and derivative works may be used for non-commercial purposes only.
-   “Non-commercial” means any use that is not primarily intended for or directed
-   toward commercial advantage or monetary compensation.
-
-   Examples of prohibited commercial uses include, but are not limited to:
-     - Selling the Software or derivative works;
-     - Including the Software or derivative works in a paid product or service;
-     - Using the Software in connection with advertising, sponsorships, or
-       affiliate marketing;
-     - Any activity that generates direct revenue from use of the Software.
-   
-3. **Attribution**
-
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software and derivative works.
-
-4. **Trademarks and Branding**
-
-   This license does not grant permission to use any trade names, trademarks,
-   service marks, or logos associated with the author or project.
-
-5. **Warranty Disclaimer**
-
-   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-   SOFTWARE.
-
-6. **License Summary**
-
-   In summary:
-   - You may use, copy, modify, and share this Software freely for non-commercial purposes.
-   - You must provide attribution to the original author.
-   - You may not use this Software or its derivatives for commercial purposes
-     of any kind.
-
 # Application Features
 - **Search Over 4,000 Recipes:** Find dishes by name with ease.  
 - **Filter by Meal Type:** Narrow down options based on breakfast, lunch, dinner, or more.  
@@ -71,6 +21,17 @@ non-commercial purposes only, subject to the following conditions:
 - **Ingredient-Based Search:** Find meals you can make with what’s already in your pantry.  
 - **User Feedback at a Glance:** Read summaries of what other users think of each dish.  
 - **Step-by-Step Instructions:** Follow detailed guides and time estimates for every recipe.
+
+# License
+This project is licensed under the **Modified MIT License – Non-Commercial Use Only (MIT-NC)**.  
+
+**License Summary**
+- You may **use, copy, modify, and share** this software freely for **non-commercial purposes**.
+- You must **give attribution** to the original author.
+- You may **not use any logos, trademarks, or branding** associated with the author or project.
+- You may **not use this software or its derivatives for commercial purposes** of any kind.
+
+See [LICENSE](./LICENSE) for full legal details.
 
 # How to Install Application
 
@@ -106,6 +67,8 @@ npm install --save-dev @electron-forge/maker-squirrel
 ```
 npm run make
 ```
+
+
 
 ## Linux Installation Instructions
 ### 1. Download the files
