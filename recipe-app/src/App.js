@@ -3,7 +3,6 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { FormDataProvider } from "./Web_Files/SharedData";
 import { Home } from "./Web_Files/Home";
 import KeyHome from "./Web_Files/Home";
-import { Main } from "./Web_Files/Main";
 import Results from "./Web_Files/RecipeResults";
 import ExpandedResults from "./Web_Files/RecipeExpanded";
 import { Privacy, AboutUs, Terms } from "./Web_Files/FooterPages";

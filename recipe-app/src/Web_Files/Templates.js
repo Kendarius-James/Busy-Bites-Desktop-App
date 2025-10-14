@@ -29,12 +29,11 @@ export function Header() {
 // Footer Template Component
 export function Footer() {
     return (
-        <footer className="footer-background">
+        <footer className="footer-background no-print">
             <div className="font-small footer-container">
                 <div className="footer-category">
                     <h3>This Service Is Made With</h3>
                     <ul>
-                        {/* Insert IPC default browser here */}
                         <li><a href="https://spoonacular.com/food-api">Spoonacular Food API</a></li>
                     </ul>
                 </div>
@@ -61,7 +60,6 @@ export function BodyBackground({ FormWindow }) {
             <div className="position-form">
                 <FormWindow/>
             </div>
-            {/* Use IPC for node to open in default browser */}
             <p className="font-medium credit-text">Photo by <a href="https://unsplash.com/@brookecagle?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brooke Cagle</a> on <a href="https://unsplash.com/photos/brown-bread-on-white-textile-0RUlEosIP8Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </p>
         </div>

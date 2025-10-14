@@ -3,7 +3,7 @@ import { SearchMealName } from "./Recipe Components/MealName";
 import { RecipePreferences } from "./Recipe Components/RecipePreferences";
 import { Ingredients } from "./Recipe Components/Ingredients";
 import { renderOptionText } from "./Recipe Components/Utilities";
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormDataContext } from "./SharedData";
 
@@ -152,7 +152,7 @@ export function SearchRecipe() {
         return true;
     };
 
-    // Handle Enter for the ingredient text input
+    // Handle enter for the ingredient text input
     const handleEnter = (e) => {
         if (e.key === "Enter") {
             handleAddDisplay();
@@ -176,7 +176,6 @@ export function SearchRecipe() {
             errorMessage.push("Meal mame cannot contain numbers or symbols.");
             isValidData = false;
         }
-
         if (settings[0] === "") {
             errorMessage.push("Meal type cannot be empty.");
             isValidData = false;
@@ -193,11 +192,6 @@ export function SearchRecipe() {
             errorMessage.push("Preparation time cannot be empty.");
             isValidData = false;
         }
-
-        // if (display.length === 0) {
-        //     errorMessage.push("Please enter one or more ingredients.");
-        //     isValidData = false;
-        // }
         let validIngredient = true;
         display.forEach((ingredient) => {
             if (isValid(ingredient) === false) {
@@ -281,8 +275,5 @@ export function Error({ error }) {
             </p>
         ));
 
-        // return options.map((optionElement, index) => (
-        //     <option key={index+1} value={optionElement}>{renderOptionText(optionElement)}</option>
-        // ))
     }
 }

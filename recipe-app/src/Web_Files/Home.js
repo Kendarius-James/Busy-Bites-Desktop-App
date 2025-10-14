@@ -3,8 +3,6 @@ import "./Styles/Font.css";
 import { SearchRecipe } from "./RecipeSearch.js";
 import { GetAPIKey } from "./ApiKey.js";
 import { BodyBackground } from "./Templates.js";
-import React from "react";
-
 // Home.js stores all forms pages
 
 // API Component template

@@ -18,29 +18,6 @@ function PageLayout({content}) {
 // Footer page links //
 //////////////////////
 
-// Questions page component
-export function Questions() {
-
-    function QuestionsContent() {
-        return (
-            <>
-                <h1>About Us</h1>
-                <p>
-                    
-                </p>
-            </>
-        );
-    }
-
-    return (
-        <div>
-            <Header />
-                <PageLayout content={<QuestionsContent/>}/>
-            <Footer />
-        </div>
-    );
-}
-
 // About us page component
 export function AboutUs() {
     const navigate = useNavigate();
@@ -140,7 +117,7 @@ export function Terms() {
 
     function TermsContent() {
 
-        const termsRevisionDate = "December 10, 2024";
+        const termsRevisionDate = "October 10, 2025";
         return (
             <div className="font-medium">
                 <h1>Terms of Service </h1>
@@ -170,10 +147,10 @@ export function Terms() {
                     <p>The Busy Bites application relies on third-party APIs, such as the Spoonacular API, to retrieve and display recipe information and ensure proper functionality. While these external sources are essential to the application, Busy Bites does not control or guarantee the accuracy, completeness, or availability of the data provided by these services. </p>
                     <p>Users acknowledge that any reliance on data from external APIs is at their own discretion, and Busy Bites assumes no responsibility for errors, omissions, or interruptions in the data provided by these third-party services.</p>
                 
-                    <li className="section-heading">    External Hyperlinks Disclaimer </li>
+                    <li className="section-heading">External Hyperlinks Disclaimer </li>
                     <p>Busy Bites may include hyperlinks to external websites or sources to credit the original authors of recipes or the providers of API services. By clicking on these hyperlinks, users acknowledge that they are leaving the Busy Bites application and agree to exercise caution while visiting external sites. Busy Bites is not responsible for the content, risks, or liabilities associated with these external websites. </p>
                 
-                    <li className="section-heading">    Allergen Information Disclaimer </li>
+                    <li className="section-heading">Allergen Information Disclaimer </li>
                     <p>Busy Bites includes features to assist users in filtering recipes based on potential allergens. However, users are solely responsible for independently verifying allergen information before preparing or consuming any recipes. Busy Bites does not guarantee the accuracy of allergen data and assumes no liability for any adverse reactions resulting from its use.</p>
 
                     <li className="section-heading">Data Privacy</li>
@@ -185,15 +162,13 @@ export function Terms() {
                     <li className="section-heading">User Conduct</li>
                     <p>Users agree to use Busy Bites solely for its intended purpose. Any misuse of the application—including but not limited to attempts to harm, disrupt, or abuse its functionality—is strictly prohibited. Violations may result in restricted access or other appropriate actions.</p>
                 
-                    <li className="section-heading">    API Quotas and Availability </li>
+                    <li className="section-heading">API Quotas and Availability </li>
                     <p>Busy Bites relies on the Spoonacular API for its functionality, which may be subject to usage quotas and availability. The app is not responsible for interruptions or limitations caused by API downtimes or quota restrictions.</p>
-                    <p>Users are not required to purchase any Spoonacular API plans to access Busy Bites as of December 2, 2024. However, users must create a Spoonacular API account and obtain an API key to use the application. If users choose to purchase a Spoonacular API plan, they are responsible for following Spoonacular's purchase procedures and adhering to their <a href="https://spoonacular.com/food-api/terms">terms and conditions</a>. </p>
+                    <p>Users are not required to purchase any Spoonacular API plans to access Busy Bites as of October 10, 2025. However, users must create a Spoonacular API account and obtain an API key to use the application. If users choose to purchase a Spoonacular API plan, they are responsible for following Spoonacular's purchase procedures and adhering to their <a href="https://spoonacular.com/food-api/terms">terms and conditions</a>. </p>
                 
                     <li className="section-heading">Modifications and Updates</li>
                     <p>Busy Bites is a personal project and may be updated, modified, or discontinued at any time without prior notice. Users are encouraged to check for updates periodically to stay informed about changes.</p>
                 
-                    <li className="section-heading">Contact Information</li>
-                    <p>For questions, concerns, or feedback about Busy Bites, please contact us at KendariusJames@protonmail.com.</p>
                 </ol>
             </div>
         );
@@ -212,7 +187,7 @@ export function Terms() {
 export function Privacy() {
 
     function PrivacyContent() {
-        const privacyRevisedDate = "December 10, 2024";
+        const privacyRevisedDate = "October 10, 2025";
 
         return (
             <div className="font-medium">
@@ -238,7 +213,7 @@ export function Privacy() {
                     </ol>
 
                     <li className="section-heading">Cookies and Tracking</li>
-                    <p>As of December 10, 2024, Busy Bites do not use cookies or any tracking technologies to collect user data. </p>
+                    <p>As of October 10, 2025, Busy Bites do not use cookies or any tracking technologies to collect user data. </p>
                     
                     <li className="section-heading">Third-Party Sharing</li>
                     <p>Busy Bites shares limited information with third-party service providers to enable core functionality: </p>
@@ -263,9 +238,6 @@ export function Privacy() {
 
                     <li className="section-heading">Changes to the Privacy Policy</li>
                     <p>Busy Bites may update this Privacy Policy often. We will notify you of any significant changes by posting a revised policy on this page with an updated effective date. Please review this policy regularly to stay informed about our privacy practices.</p>
-                    
-                    <li className="section-heading">Contact Information</li>
-                    <p>If you have any questions, concerns, or feedback about this Privacy Policy or how Busy Bites handles your information, please contact us at KendariusJames@protonmail.com. We value your privacy and will respond promptly to any inquiries. </p>
                 </ol>
                 <p></p>
             </div>

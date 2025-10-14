@@ -44,7 +44,7 @@ label:hover + select {
 }
 
 /* submit and ingredient buttons */
-.ingredient-button, .submit-button {
+.ingredient-button, .submit-button{
     width: 20%;
     height: 50px;
 }
@@ -54,6 +54,17 @@ label:hover + select {
 }
 .ingredient-button {
     margin: 6px;
+}
+.print-button {
+    /* background-color: transparent;
+    border: none; */
+    cursor: pointer;
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.print-text {
+    margin: 0px;
 }
 
 /* Mobile and tablet display */
@@ -199,4 +210,11 @@ label:hover + select {
         height: 440px;
     }
     
+}
+
+/* Remove components when printing */
+@media print {
+    .no-print {
+        display: none;
+    }
 }

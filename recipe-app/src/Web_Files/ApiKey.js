@@ -9,7 +9,6 @@ import { Link, useNavigate } from "react-router-dom";
 export function GetAPIKey() {
     const [api, setApi] = useState("");
     const [appError, setAppError] = useState([]);
-    const [joke, setJoke] = useState("");
     const [checkbox, setCheckbox] = useState(false);
 
     const navigate = useNavigate();
@@ -20,20 +19,19 @@ export function GetAPIKey() {
     }
 
     // Pings the food joke api for api validation
-    const fetchJoke = async (checkbox, api, setAppError, setJoke) => {
+    const fetchJoke = async (checkbox, api, setAppError) => {
         try {
             if (checkbox === true) {
                 const url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api}`;
                 const response = await axios.get(url);
-                console.log(response);
-                setJoke(response.data.text);
                 sessionStorage.setItem("ApiKeyStatus", true);
-                // Write api key to .env file
-                console.log("[rd] sending key");
+                
+                // Write api key to .env file using electron ipc
                 window.key.saveEnv({REACT_APP_SPOONACULAR_API_KEY: api});
-                navigate("/home");
-
                 setAppError([]);
+                console.log(response.status);
+                console.log("test");
+                return response.data.text;
             } else {
                 setAppError(["Please agree to the Terms of Service and Privacy Policy."]);
             }
@@ -43,20 +41,17 @@ export function GetAPIKey() {
         }
     };
 
-    // Performs input validation after submission
-    function checkValidInput(e) {
+    // Performs input validation after user submission and navigates to home if valid
+    async function checkValidInput(e) {
         setAppError([]);
         e.preventDefault();
         if (api === "") {
             setAppError(["The input is empty. Please enter your API Key."]);
         } else {
-            console.log("home");
-            fetchJoke(checkbox, api, setAppError, setJoke);
-            if (joke.length > 0 && checkbox === true){
-                // window.key.saveEnv({API_Key: api});
-                // window.key.saveEnv({ API_KEY: api});
-                // ipcRenderer.send('save-env', { API_KEY: api});
-                
+            let joke = await fetchJoke(checkbox, api, setAppError);
+            console.log(joke);
+            if (checkbox === true && process.env.REACT_APP_SPOONACULAR_API_KEY !== undefined){
+                console.log("navigating to home");
                 navigate("/home");
             }
         }
@@ -107,7 +102,6 @@ export function GetAPIKey() {
                             <Link to="/terms-of-use">Terms of Service</Link> and{" "}
                             <Link to="/private-policy">Privacy Policy</Link>.
                         </label>
-                        {/* {joke.length > 0 && checkbox === true ? navigate("/home") : ""} */}
                     </div>
                 </div>
                 <button

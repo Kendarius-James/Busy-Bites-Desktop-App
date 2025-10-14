@@ -113,9 +113,7 @@ function CardContainer({
                         }
                     });
                     const response = await axios.get(url);
-                    console.log(response);
                     response.data.totalResults === 0 ? setIsValid(false) : setIsValid(true);
-                    console.log(response.data.results);
                     setRecipes(response.data.results);
                     sessionStorage.setItem(
                         "prevRecipeData",
@@ -177,7 +175,6 @@ function OuterDisplayCards ({formData, recipes, getPrevRecipes, isValid}){
         <div>
             <h2 className="font-large results-label">Results:</h2>
             <div className="results-body results-body-mobile">
-                {console.log(recipes)}
                 {Object.keys(formData).length > 0 ? (
                     <DisplayCards key="1" recipes={recipes} isValid={isValid} />
                 ) : (
@@ -253,7 +250,6 @@ function DisplayCards ({recipes, isValid}) {
     else {
         return (
             <>
-            {console.log(`isValid: ${isValid}`)}
                 {isValid ? (
                     <h3 className="font-medium no-results results-body-no-results results-body-mobile-no-results">
                         . . . Loading Recipes

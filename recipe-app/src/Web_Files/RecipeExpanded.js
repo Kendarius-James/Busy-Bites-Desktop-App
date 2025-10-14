@@ -2,6 +2,7 @@ import { Header, Footer } from "./Templates";
 import React, { useState, useEffect } from "react";
 import "./Styles/Font.css"
 import "./Styles/Recipe.css"
+import  printIcon  from "../images/print_solid.svg"
 import { useLocation } from "react-router-dom";
 import { displayElements } from "./Recipe Components/Utilities"
 
@@ -16,7 +17,7 @@ export default function ExpandedResults() {
         <div>
             <Header />
             <RecipeBackground recipe={recipe}/>
-            <Footer />
+            <Footer/>
         </div>
     );
 }
@@ -42,7 +43,6 @@ function RecipeBackground({recipe}) {
                     totalTime={recipe.readyInMinutes}
                     servings={recipe.servings}
                 />
-                {console.log(recipe)}
                 <RecipeBody
                 recipe={recipe} />
             </div>
@@ -68,17 +68,24 @@ function HeroSection({
         window.openExternal.link(href);
     }
 
+    const handlePrint = (e) => {
+        e.preventDefault();
+        window.print();
+    }
+
     return (
         <>
             <h2 className="recipe-text font-large cuisine-name-expanded">Cuisine: {cuisineName}</h2>
             <h3 className="recipe-text font-larger">{recipeName}</h3>
             <h4 className="recipe-text font-medium source-expanded">
-
-                {/* Insert IPC external default browser here */}
                 By {authorName} at <a href={recipeUrl} onClick={(e) => handleClick(e, recipeUrl)} target="_blank" rel="noopener noreferrer">
                     {authorName}
                 </a>
             </h4>
+            <button className="no-print print-button font-medium" onClick={(e) => handlePrint(e)}>
+                <img src={printIcon} width="40" height="40" alt="Print"></img>
+                <p className="print-text">Print</p>
+            </button>
             <HeroImage imageURL={imageURL} imageAlt={imageAlt}/>
             <RecipeBox totalPrepTime={totalPrepTime} totalCookTime={totalCookTime} totalTime={totalTime} servings={servings}/>
         </>
@@ -146,12 +153,10 @@ export function RecipeBox ({totalPrepTime, totalCookTime, totalTime, servings}) 
 // Retrives the recipe steps and ingredients and send data to other components
 function RecipeBody({recipe}) {
     const [ingredients, setIngredients] = useState([]);
-    // const [images, setImages] = useState([]);
     const [recipeSteps, setRecipeSteps] = useState([]);
 
     useEffect(() => {
         try {
-            console.log(recipe.analyzedInstructions[0].steps);
             const steps = recipe.analyzedInstructions[0].steps;
             setRecipeSteps([...steps]);
             let currentIngredients = [];
@@ -189,7 +194,6 @@ function RecipeBody({recipe}) {
                 <CleanSummary summary={recipe.summary}/>
             </p>
         <h3 className="font-large">Recipe Steps:</h3>
-        {console.log(recipeSteps)}
         <RecipeSteps steps={recipeSteps} />
     </>
 )

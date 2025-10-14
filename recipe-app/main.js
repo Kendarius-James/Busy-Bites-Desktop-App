@@ -12,11 +12,11 @@ app.whenReady().then(() => {
     height: 768,
     icon: path.join(__dirname, 'src', 'images', 'busy_bites_logo.png'),
     webPreferences: {
-      nodeIntegration: false, // Security best practice
-      contextIsolation: true, // Security best practice
-      enableRemoteModule: false, // ❌ Disables remote module
-      sandbox: true, // ✅ Runs renderer in secure mode
-      webSecurity: true, // ✅ Prevents XSS & local file access
+      nodeIntegration: false, 
+      contextIsolation: true, 
+      enableRemoteModule: false, 
+      sandbox: true, 
+      webSecurity: true, 
       preload: path.join(__dirname, 'preload.js'),
     },
   });
@@ -42,19 +42,29 @@ app.whenReady().then(() => {
     }
   });
 
+  // Clear .env file on app close
   mainWindow.on("closed", () => {
+    const envPath = path.join(__dirname, '.env');
+    try {
+      if (fs.existsSync(envPath)) {
+        fs.unlinkSync(envPath);
+      }
+      } catch (err) {
+        console.error("Error deleting .env file:", err);
+      }
+
     mainWindow = null;
   });
 });
 
 app.on("window-all-closed", () => {
+
   if (process.platform !== "darwin") app.quit();
 });
 
 // IPC to set the enviroment variables
 ipcMain.on('save-env-data', (event, data) => {
   const envPath = path.join(__dirname, '.env');
-  console.log(data);
   let content = '';
   for (const [key, value] of Object.entries(data)) {
     content += `${key}="${value}"\n`;
@@ -69,6 +79,7 @@ ipcMain.on('save-env-data', (event, data) => {
   }); 
 })
 
+// IPC to open links in default browser
 ipcMain.on('external-link', (event, url) => {
   shell.openExternal(url);
 })
