@@ -110,6 +110,11 @@ sudo apt install npm
 npm install react react-dom
 ```
 #### ⚠️ If there is an issue with different node versions, install node version manager (nvm) with the following code.
+Installs Client URL (curl), which is used to transfer data to or from a server using URLs.
+```
+sudo apt install curl
+```
+Installs node version manager (nvm)
 ```
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
