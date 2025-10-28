@@ -44,6 +44,20 @@ See [LICENSE](./LICENSE) for full legal details.
 # 💿 Installation Instructions
 
 ## 🪟 Windows Installation Instructions
+## Option 1. Releases
+### 1. Click Link Named "Busy Bites v1.0.0"
+<img width="422" height="757" alt="image" src="https://github.com/user-attachments/assets/53739a51-48e2-40f8-9596-c49d37767c7f" />
+
+### 2. Download the .Zip File
+<img width="1521" height="292" alt="image" src="https://github.com/user-attachments/assets/af0751c1-7349-4693-9a94-ba62db8f097b" />
+
+⚠️ Note: When running the application on Windows from the .zip folder, you may see a warning that the software is from an unknown publisher. This occurs because the application has not been signed with a certificate from a trusted Certificate Authority (CA).
+
+✅ You can select “Run anyway” to launch the app, or follow the installation instructions for Command Line to run the app through the command line, which avoids this pop-up entirely.
+
+---
+
+## Option 2. Command Line
 ### 1. Download the files
 Download the Zip file or git clone below.
 ```
@@ -96,6 +110,11 @@ sudo apt install npm
 npm install react react-dom
 ```
 #### ⚠️ If there is an issue with different node versions, install node version manager (nvm) with the following code.
+Installs Client URL (curl), which is used to transfer data to or from a server using URLs.
+```
+sudo apt install curl
+```
+Installs node version manager (nvm)
 ```
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
