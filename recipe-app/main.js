@@ -44,7 +44,7 @@ app.whenReady().then(() => {
 
   // Clear .env file on app close
   mainWindow.on("closed", () => {
-    const envPath = path.join(__dirname, '.env');
+    const envPath = path.join(app.getPath('userData'), '.env');
     try {
       if (fs.existsSync(envPath)) {
         fs.unlinkSync(envPath);
@@ -64,7 +64,8 @@ app.on("window-all-closed", () => {
 
 // IPC to set the enviroment variables
 ipcMain.on('save-env-data', (event, data) => {
-  const envPath = path.join(__dirname, '.env');
+  const envPath = path.join(app.getPath('userData'), '.env');
+  console.log("Saving .env to:", envPath);
   let content = '';
   for (const [key, value] of Object.entries(data)) {
     content += `${key}="${value}"\n`;
@@ -77,7 +78,26 @@ ipcMain.on('save-env-data', (event, data) => {
       console.log('.env updated successfully!');
     }
   }); 
-})
+});
+
+ipcMain.handle('read-env-data', async () => {
+    try {
+      const envPath = path.join(app.getPath('userData'), '.env');
+      console.log("Reading .env from:", envPath);
+      const envContents = await fs.promises.readFile(envPath, 'utf8');
+      const parsedEnv = Object.fromEntries(
+      envContents.split('\n')
+        .filter(line => line && !line.startsWith('#'))
+        .map(line => line.split('='))
+      );
+
+      // Return the data to renderer
+      return { success: true, data: parsedEnv };
+    } catch (error) {
+      console.error('Error reading .env:', error);
+      return { success: false, error: error.message };
+    }
+});
 
 // IPC to open links in default browser
 ipcMain.on('external-link', (event, url) => {

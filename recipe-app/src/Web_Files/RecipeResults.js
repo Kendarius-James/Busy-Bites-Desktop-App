@@ -68,7 +68,8 @@ function CardContainer({
             try {
                 if (Object.keys(formData).length > 0) {
                     let url = `https://api.spoonacular.com/recipes/complexSearch`;
-                    const apiKey = `?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`;
+                    const envContents = await window.key.readEnv();
+                    const apiKey = `?apiKey=${JSON.parse(envContents.data.REACT_APP_SPOONACULAR_API_KEY)}`;
                     const query = formData.mealName
                         ? `query=${formData.mealName}`
                         : "";

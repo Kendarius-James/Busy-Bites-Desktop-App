@@ -18,23 +18,51 @@ export function GetAPIKey() {
         setApi(e.target.value.trim());
     }
 
+    // Saves the api key to the .env file
+    const saveKeytoFile = async (api) => {
+            
+            let retrieveKey = "";
+            try {
+                await window.key.saveEnv({REACT_APP_SPOONACULAR_API_KEY: api});
+            }
+            catch {
+                console.log("Failed to save API key to .env file");
+            }
+            try {
+                const envContents = await window.key.readEnv();
+                if (envContents.success){
+                    retrieveKey = JSON.parse(envContents.data.REACT_APP_SPOONACULAR_API_KEY);
+                }
+                else {
+                    console.log("Failed to read back API key from .env file" + envContents.error);
+                }
+            }
+            catch{
+                console.log("Failed to read back API key from .env file");
+            }
+            try {
+                if (retrieveKey !== api) {
+                    throw new Error("API key mismatch after saving to .env");
+                }
+                return true;
+            }
+            catch {
+                console.error("Error saving API key to .env file");
+                setAppError(["Error saving API key. Please try again."]);
+                return false;
+            }
+    };
+
     // Pings the food joke api for api validation
     const fetchJoke = async (checkbox, api, setAppError) => {
         try {
-            if (checkbox === true) {
-                const url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api}`;
-                const response = await axios.get(url);
-                sessionStorage.setItem("ApiKeyStatus", true);
+            const url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api}`;
+            const response = await axios.get(url);
                 
-                // Write api key to .env file using electron ipc
-                window.key.saveEnv({REACT_APP_SPOONACULAR_API_KEY: api});
-                setAppError([]);
-                console.log(response.status);
-                console.log("test");
-                return response.data.text;
-            } else {
-                setAppError(["Please agree to the Terms of Service and Privacy Policy."]);
-            }
+            setAppError([]);
+ 
+            console.log(response.status);
+            return response.data.text;
         } catch {
             sessionStorage.setItem("ApiKeyStatus", false);
             setAppError(["Invalid Api Key. Please enter a correct Api key."]);
@@ -45,16 +73,45 @@ export function GetAPIKey() {
     async function checkValidInput(e) {
         setAppError([]);
         e.preventDefault();
+        let status = true;
+
         if (api === "") {
             setAppError(["The input is empty. Please enter your API Key."]);
-        } else {
-            let joke = await fetchJoke(checkbox, api, setAppError);
-            console.log(joke);
-            if (checkbox === true && process.env.REACT_APP_SPOONACULAR_API_KEY !== undefined){
+            status = false;
+            return;
+        } 
+
+        if (api.length > 40) {
+            setAppError(["The API key entered is too long. Please check your API key and try again."]);
+            status = false;
+            return;
+        }
+        
+        if (!checkbox) {
+            setAppError(["Please agree to the Terms of Service and Privacy Policy."]);
+            status = false;
+            return;
+        }
+
+        const joke = await fetchJoke(checkbox, api, setAppError);
+
+        if (!joke) {
+            setAppError(["Unable to fetch data with the provided API key. Please check your API key and try again."]);
+            status = false;
+            return;
+        }
+        const savedKeyStatus = await saveKeytoFile(api);
+        if(!savedKeyStatus) {
+            status = false;
+        }
+
+        console.log(joke);
+        if (status) {
+                sessionStorage.setItem("ApiKeyStatus", true);
                 console.log("navigating to home");
                 navigate("/home");
             }
-        }
+        
     }
 
     return (
