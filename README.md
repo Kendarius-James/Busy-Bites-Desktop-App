@@ -45,11 +45,11 @@ See [LICENSE](./LICENSE) for full legal details.
 
 ## 🪟 Windows Installation Instructions
 ## Option 1. Releases
-### 1. Click Link Named "Busy Bites v1.0.0"
-<img width="422" height="757" alt="image" src="https://github.com/user-attachments/assets/53739a51-48e2-40f8-9596-c49d37767c7f" />
+### 1. Click Link Named "Busy Bites v1.0.2"
+<img width="425" height="782" alt="image" src="https://github.com/user-attachments/assets/4a33391b-5c2e-4c3e-8a35-424262c17690" />
 
 ### 2. Download the .Zip File
-<img width="1521" height="292" alt="image" src="https://github.com/user-attachments/assets/af0751c1-7349-4693-9a94-ba62db8f097b" />
+<img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
 
 ⚠️ Note: When running the application on Windows from the .zip folder, you may see a warning that the software is from an unknown publisher. This occurs because the application has not been signed with a certificate from a trusted Certificate Authority (CA).
 
@@ -64,49 +64,68 @@ Download the Zip file or git clone below.
 git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
 ```
 ### 2. Install Node Package Manager
-Go to https://nodejs.org/en and install node.js. To verify successful installation, run the following commands below.
+Go to https://nodejs.org/en and install node.js. To verify successful installation, run the following commands below inside the Busy-Bites-Electron-App directory.
 ```
 node -v
 npm -v
 ```
-### 3. Install React and React-dom
+To change into the Busy-Bites-Electron-App directory using the terminal, see the example below.
 ```
+cd .\Busy-Bites-Electron-App\
+```
+### 3. Install React and React-dom
+Change into the recipe-app directory and install react and react-dom.
+```
+cd '.\recipe-app\'
 npm install react react-dom
 ```
 ### 4. Build the React Files 
-Change into the recipe app directory and build the react files. Afterwards, change back to the previous directory.
+Remaining inside the recipe-app directory, build the react files. 
 ```
-cd '/recipe-app'
 npm run build
-cd ..
 ```
 ### 5. Install Electron 
+After building the React Files, change back to the Busy-Bites-Electron-App directory and install Electron.
 ```
+cd ..
 npm install electron
 ```
-### 6. Install Maker for Windows Distribution
-```
-npm install --save-dev @electron-forge/maker-squirrel
-```
-### 7. Create Executable
+### 6. Create the Executable
+Inside the Busy-Bites-Electron-App directory, use npm make to create the executable. This step may take a while.
 ```
 npm run make
 ```
 
 ---
 
-## 🐧 Linux Installation Instructions
+## 🐧 Linux Installation Instructions (Ubuntu)
+## Option 1. Releases
+### 1. Click Link Named "Busy Bites v1.0.2"
+<img width="425" height="782" alt="image" src="https://github.com/user-attachments/assets/4a33391b-5c2e-4c3e-8a35-424262c17690" />
+
+### 2. Download the .Zip File
+<img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
+
+## Option 2. Command Line
 ### 1. Download the Files
 Download the Zip file or git clone below.
 ```
 git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
 ```
 ### 2. Install Node Package Manager
+Inside the Busy-Bites-Electron-App directory, install the Node package manager.
 ```
 sudo apt install npm
 ```
-### 3. Install React and React-dom
+To verify successful installation, run the following commands below.
 ```
+node -v
+npm -v
+```
+### 3. Install React and React-dom
+Change into the recipe-app directory and install react and react-dom.
+```
+cd recipe-app/
 npm install react react-dom
 ```
 #### ⚠️ If there is an issue with different node versions, install node version manager (nvm) with the following code.
@@ -123,30 +142,18 @@ nvm install --lts
 nvm use --lts   
 ```
 ### 4. Build the React Files 
-Change into the recipe app directory and build the react files. Afterwards, change back to the previous directory.
+Remaining inside the recipe app directory, build the react files. Afterwards, change back to the Busy-Bites-Electron-App directory.
 ```
-cd '/recipe-app'
 npm run build
 cd ..
 ```
 ### 5. Install Electron 
+After building the React Files, remaining inside the Busy-Bites-Electron-App directory and install Electron.
 ```
 npm install electron
 ```
-### 6. Install Maker for Chosen Distribution
-#### Creates .deb packages (Debian, Ubuntu).
-```
-npm install --save-dev @electron-forge/maker-deb 
-```
-#### Creates .rpm packages (Fedora, CentOS).
-```
-npm install --save-dev @electron-forge/maker-rpm
-```
-#### Creates an AppImage.
-```
-npm install --save-dev @electron-forge/maker-appimage
-```
-### 7. Create executable
+### 6. Create executable
+Inside the Busy-Bites-Electron-App directory, use npm make to create the executable. This step may take a while.
 ```
 npm run make
 ```
