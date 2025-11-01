@@ -1,5 +1,5 @@
 # 🍽️ Busy Bites
-Busy Bites is a recipe search desktop application designed to search over 4000 recipes tailored to any lifestyle. Built using Electron, React and the Spoonacular api; this application can be run on any desktop computer making it a convenient way to search for your recipe needs. 
+Busy Bites is a recipe search desktop application designed to search over 5000 recipes tailored to any lifestyle. Built using Electron, React and the Spoonacular api; this application can be run on any desktop computer making it a convenient way to search for your recipe needs. 
 
 <img width="900" height="600" alt="Busy Bites Home" src="https://github.com/user-attachments/assets/71216c36-80af-43f3-a289-b3f65fcd3c7e" />
 
@@ -17,7 +17,7 @@ Busy Bites is a recipe search desktop application designed to search over 4000 r
 ---
 
 # ✨ Application Features
-- 🍲 **Search Over 4,000 Recipes:** Find dishes by name with ease.  
+- 🍲 **Search Over 5,000 Recipes:** Find dishes by name with ease.  
 - 🥞 **Filter by Meal Type:** Narrow down options based on breakfast, lunch, dinner, or more.  
 - 🚫 **Exclude Allergy Ingredients:** Remove recipes containing allergens for safer cooking.  
 - 🍳 **Refine by Cookware:** Discover recipes that match the tools in your kitchen.  
@@ -46,7 +46,7 @@ See [LICENSE](./LICENSE) for full legal details.
 ## 🪟 Windows Installation Instructions
 ## Option 1. Releases
 ### 1. Click Link Named "Busy Bites v1.0.2"
-<img width="425" height="782" alt="image" src="https://github.com/user-attachments/assets/4a33391b-5c2e-4c3e-8a35-424262c17690" />
+<img width="430" height="787" alt="image" src="https://github.com/user-attachments/assets/93e075f9-6b5b-4010-b01a-6cbae2390fc6" />
 
 ### 2. Download the .Zip File
 <img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
@@ -101,7 +101,7 @@ npm run make
 ## 🐧 Linux Installation Instructions (Ubuntu)
 ## Option 1. Releases
 ### 1. Click Link Named "Busy Bites v1.0.2"
-<img width="425" height="782" alt="image" src="https://github.com/user-attachments/assets/4a33391b-5c2e-4c3e-8a35-424262c17690" />
+<img width="430" height="787" alt="image" src="https://github.com/user-attachments/assets/4bd4987b-9709-4191-b4e4-73f31ba91fe6" />
 
 ### 2. Download the .Zip File
 <img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
