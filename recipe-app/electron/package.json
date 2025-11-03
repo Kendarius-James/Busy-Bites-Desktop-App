@@ -30,6 +30,7 @@
     "linux": {
       "icon": "../react/src/images/busy_bites_logo.png"
     }
-  }
+  },
+  "license": "Modified MIT License - Non-Commercial Use Only (MIT-NC)"
 
 }
