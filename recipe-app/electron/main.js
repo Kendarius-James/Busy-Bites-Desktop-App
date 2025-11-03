@@ -10,7 +10,7 @@ app.whenReady().then(() => {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
-    icon: path.join(__dirname, 'src', 'images', 'busy_bites_logo.png'),
+    icon: path.join(__dirname, '../react/src/images/busy_bites_logo.png'),
     webPreferences: {
       nodeIntegration: false, 
       contextIsolation: true, 
@@ -26,9 +26,10 @@ app.whenReady().then(() => {
 
   // Load React app during development
   if (isDev) {
-    mainWindow.loadURL("http://localhost:3000");
+    mainWindow.loadURL("http://localhost:5173");
   } else {
-    mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
+    console.log(path.join(__dirname, "../react/dist/index.html"));
+    mainWindow.loadFile(path.join(__dirname, "../react/dist/index.html"));
   }
 
   // Open tabs in default browser

@@ -1,6 +1,8 @@
 import "./Styles/Home.css";
 import logo from "../images/busy_bites_logo.png";
 import { Link } from "react-router-dom";
+import KeyHome from "./Home.jsx";
+import Home from "./Home.jsx";
 
 
 // Header Template Component
@@ -50,23 +52,3 @@ export function Footer() {
         </footer>
     );
 }
-
-// Image background template for forms
-export function BodyBackground({ FormWindow }) {
-    return (
-        <>
-        <Header/>
-        <div className="background-image background-image-mobile">
-            <div className="position-form">
-                <FormWindow/>
-            </div>
-            <p className="font-medium credit-text">Photo by <a href="https://unsplash.com/@brookecagle?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brooke Cagle</a> on <a href="https://unsplash.com/photos/brown-bread-on-white-textile-0RUlEosIP8Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            </p>
-        </div>
-        <Footer/>
-        </>
-    );
-}
-
-
-

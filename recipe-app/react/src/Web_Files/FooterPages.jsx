@@ -39,7 +39,7 @@ export function AboutUs() {
                     schedule.
                 </p>
                 <p>
-                    With Busy Bites, you have access to over 5,000 quality
+                    With Busy Bites, you have access to over 4,000 quality
                     recipes designed for any occasion. Whether it's a
                     last-minute family gathering, a casual dinner, or mastering
                     your next signature dish. No matter your time constraints,
@@ -86,7 +86,7 @@ export function AboutUs() {
 
                 <h2>Why Choose Busy Bites?</h2>
                 <ul>
-                    <li><span className="about-bold">Search Over 5,000 Recipes: </span>Find dishes by name with ease.</li>
+                    <li><span className="about-bold">Search Over 4,000 Recipes: </span>Find dishes by name with ease.</li>
                     <li><span className="about-bold">Filter by Meal Type: </span>Narrow down options based on breakfast, lunch, dinner, or more.</li>
                     <li><span className="about-see-more">*</span><span className="about-bold">Exclude Allergy Ingredients: </span>Remove recipes containing allergens for safer cooking.</li>
                     <li><span className="about-bold">Refine by Cookware: </span>Discover recipes that match the tools in your kitchen. </li>

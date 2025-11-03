@@ -1,6 +1,6 @@
 import { Header, Footer } from "./Templates";
 import React, { useContext, useEffect, useState } from "react";
-import { FormDataContext } from "./SharedData";
+import { FormDataContext } from "./FormDataContext.jsx";
 import "./Styles/Font.css";
 import "./Styles/Results.css";
 import { useNavigate } from "react-router-dom";
@@ -277,7 +277,7 @@ function RecipeCard({
     dishRecipe
 }) {
     const navigate = useNavigate();
-    const handleCardClick = (e) => {
+    const handleCardClick = () => {
         // get recipe data and redirect to other page
         navigate("/resultsExpanded", { state: dishRecipe });
     };

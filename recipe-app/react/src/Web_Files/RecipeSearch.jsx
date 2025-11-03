@@ -5,7 +5,7 @@ import { Ingredients } from "./Recipe Components/Ingredients";
 import { renderOptionText } from "./Recipe Components/Utilities";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FormDataContext } from "./SharedData";
+import { FormDataContext } from "./FormDataContext.jsx";
 
 const mealType = [
     "any",
@@ -97,7 +97,7 @@ export function SearchRecipe() {
     };
 
     // Add a new ingredient in the ingredient array,
-    const handleAddDisplay = (e) => {
+    const handleAddDisplay = () => {
         if (ingredient === undefined || ingredient === "") {
             setError(["Please enter an ingredient."]);
             return;
@@ -167,11 +167,12 @@ export function SearchRecipe() {
     };
 
     // Sets the error message for the UI if more than one of the conditions is false.
-    const submitInfo = (e) => {
+    const submitInfo = () => {
         let errorMessage = [];
         let isValidData = true;
         // Check valid meal name
         if (mealName === "" || isValid(mealName)) {
+            // Valid meal name
         } else {
             errorMessage.push("Meal mame cannot contain numbers or symbols.");
             isValidData = false;

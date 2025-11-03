@@ -1,6 +1,5 @@
-import { createContext, useState } from "react";
-
-export const FormDataContext = createContext();
+import { useState } from "react";
+import { FormDataContext } from "./FormDataContext.jsx";
 
 // Sends form data across multiple pages
 export const FormDataProvider = ({ children }) => {

@@ -1,0 +1,35 @@
+{
+  "name": "recipe-app-electron",
+  "version": "1.5.0",
+  "private": true,
+  "main": "main.js",
+  "description": "Recipe desktop application using Spoonacular api",
+  "author": "Kendarius James",
+  "scripts": {
+    "start": "electron .",
+    "dev": "wait-on http://localhost:5173 && electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.0.1",
+    "electron-builder": "^24.6.4",
+    "wait-on": "^6.0.1"
+  },
+   "build": {
+    "productName": "Busy Bites",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "../react/src/images/busy_bites_logo.png",
+      "sign": false
+    },
+    "mac": {
+      "icon": "../react/src/images/busy_bites_logo.icns"
+    },
+    "linux": {
+      "icon": "../react/src/images/busy_bites_logo.png"
+    }
+  }
+
+}

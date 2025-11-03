@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Error } from "./RecipeSearch.js";
+import { Error } from "./RecipeSearch.jsx";
 import axios from "axios";
 import "./Styles/Form.css";
 import "./Styles/Font.css";
@@ -36,6 +36,7 @@ export function GetAPIKey() {
                 else {
                     console.log("Failed to read back API key from .env file" + envContents.error);
                 }
+                // retrieveKey = envContents.REACT_APP_SPOONACULAR_API_KEY
             }
             catch{
                 console.log("Failed to read back API key from .env file");
