@@ -183,6 +183,5 @@ Individual results of each recipe will vary. Once the application finish retriev
 - 📸 Home Screen photo by **Brooke Cagle** on **Unsplash**
 
 ## ✉️ Contact
-- 📧 Email: [Contact Me](KendariusJames@protonmail.com)
 - 🌐 Portfolio: [Kendarius James](https://kendarius-james.github.io/index.html)
 - 🐙 GitHub: [@kendarius-james](https://github.com/kendarius-james)
