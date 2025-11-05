@@ -11,6 +11,7 @@ Busy Bites is a recipe search desktop application designed to search over 5000 r
 - 🌐 HTML
 - 🎨 CSS
 - 📜 JavaScript
+- ⚡Vite
 - 🟢 Node.js
 - 🥗 Spoonacular API
 
@@ -45,11 +46,11 @@ See [LICENSE](./LICENSE) for full legal details.
 
 ## 🪟 Windows Installation Instructions
 ## Option 1. Releases
-### 1. Click Link Named "Busy Bites v1.0.2"
-<img width="430" height="787" alt="image" src="https://github.com/user-attachments/assets/93e075f9-6b5b-4010-b01a-6cbae2390fc6" />
+### 1. Click Link Named "Busy Bites v2.0.0"
+<img width="450" height="786" alt="image" src="https://github.com/user-attachments/assets/3d1bf441-7f78-4fd7-8383-32be7b0593d6" />
 
 ### 2. Download the .Zip File
-<img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
+<img width="1505" height="267" alt="image" src="https://github.com/user-attachments/assets/9813823c-9b80-4586-9a24-12036471b2da" />
 
 ⚠️ Note: When running the application on Windows from the .zip folder, you may see a warning that the software is from an unknown publisher. This occurs because the application has not been signed with a certificate from a trusted Certificate Authority (CA).
 
@@ -60,38 +61,51 @@ See [LICENSE](./LICENSE) for full legal details.
 ## Option 2. Command Line
 ### 1. Download the files
 Download the Zip file or git clone below.
+#### a. Click Code and then click download zip folder for source files.
+
+<img width="507" height="461" alt="image" src="https://github.com/user-attachments/assets/6eeb32b8-4904-4675-95e9-bc6977430861" />
+
+#### b. In terminal use git clone to clone the repository.
 ```
 git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
 ```
 ### 2. Install Node Package Manager
-Go to https://nodejs.org/en and install node.js. To verify successful installation, run the following commands below inside the Busy-Bites-Electron-App directory.
+Go to https://nodejs.org/en and install node.js for any version in between 20.19+ and 22.12+ to be compatible with the Vite dependency. To verify successful installation, run the following commands below inside the Busy-Bites-Electron-App directory.
 ```
 node -v
 npm -v
 ```
-To change into the Busy-Bites-Electron-App directory using the terminal, see the example below.
+To change into the recipe-app directory using the terminal, see the example below.
 ```
 cd .\Busy-Bites-Electron-App\
+cd .\recipe-app\
 ```
-### 3. Install React and React-dom
-Change into the recipe-app directory and install react and react-dom.
+### 3. Install React, React-dom, and Vite
+Change into the react directory and install react and react-dom. Afterwards change back into the recipe-app directory.
 ```
-cd '.\recipe-app\'
-npm install react react-dom
+cd '.\react\'
+npm run install
+cd ..
 ```
-### 4. Build the React Files 
+### 4. Install Electron 
+Change into the electron directory and install electron. Afterwards change back into the recipe-app directory.
+```
+cd '.\electron\
+npm run install
+cd ..
+```
+### 5. Install Electron Forge
+Inside of the recipe-app directory, install electron-forge.
+```
+npm run install
+```
+### 6. Build the React Files 
 Remaining inside the recipe-app directory, build the react files. 
 ```
 npm run build
 ```
-### 5. Install Electron 
-After building the React Files, change back to the Busy-Bites-Electron-App directory and install Electron.
-```
-cd ..
-npm install electron
-```
-### 6. Create the Executable
-Inside the Busy-Bites-Electron-App directory, use npm make to create the executable. This step may take a while.
+### 7. Create the Executable
+Remaining inside the recipe-app directory, use npm make to create the executable. This step may take a while.
 ```
 npm run make
 ```
@@ -100,15 +114,20 @@ npm run make
 
 ## 🐧 Linux Installation Instructions (Ubuntu)
 ## Option 1. Releases
-### 1. Click Link Named "Busy Bites v1.0.2"
-<img width="430" height="787" alt="image" src="https://github.com/user-attachments/assets/4bd4987b-9709-4191-b4e4-73f31ba91fe6" />
+### 1. Click Link Named "Busy Bites v2.0.0"
+<img width="450" height="786" alt="image" src="https://github.com/user-attachments/assets/3d1bf441-7f78-4fd7-8383-32be7b0593d6" />
 
 ### 2. Download the .Zip File
-<img width="1493" height="317" alt="image" src="https://github.com/user-attachments/assets/6d930436-8e96-44f5-b493-917c4e0790f8" />
+<img width="1505" height="267" alt="image" src="https://github.com/user-attachments/assets/f4666188-11e9-456b-81e0-f8d1a1c32c2d" />
 
 ## Option 2. Command Line
 ### 1. Download the Files
 Download the Zip file or git clone below.
+#### a. Click Code and then click download zip folder for source files.
+
+<img width="507" height="461" alt="image" src="https://github.com/user-attachments/assets/6eeb32b8-4904-4675-95e9-bc6977430861" />
+
+#### b. In terminal use git clone to clone the repository.
 ```
 git clone https://github.com/Kendarius-James/Busy-Bites-Electron-App.git
 ```
@@ -122,13 +141,8 @@ To verify successful installation, run the following commands below.
 node -v
 npm -v
 ```
-### 3. Install React and React-dom
-Change into the recipe-app directory and install react and react-dom.
-```
-cd recipe-app/
-npm install react react-dom
-```
-#### ⚠️ If there is an issue with different node versions, install node version manager (nvm) with the following code.
+Note it is recommended for the Node versions to be in between 20.19+ and 22.12+ to be compatible with the Vite dependency. 
+#### ⚠️ If there is an issue with different node versions or an issue with installing react, install node version manager (nvm) with the following code to adjust versions.
 Installs Client URL (curl), which is used to transfer data to or from a server using URLs.
 ```
 sudo apt install curl
@@ -141,23 +155,42 @@ source ~/.bashrc
 nvm install --lts
 nvm use --lts   
 ```
-### 4. Build the React Files 
-Remaining inside the recipe app directory, build the react files. Afterwards, change back to the Busy-Bites-Electron-App directory.
+
+### 3. Install React, React-dom, and Vite
+Change into the react directory and install react and react-dom. Afterwards change back into the recipe-app directory.
+```
+cd recipe-app/
+cd react/
+npm run install
+cd ..
+```
+### 4. Install Electron 
+Change into the electron directory and install electron. Afterwards change back into the recipe-app directory.
+```
+cd 'electron/
+npm run install
+cd ..
+```
+### 5. Install Electron Forge
+Inside of the recipe-app directory, install electron-forge.
+```
+npm run install
+```
+### 6. Build the React Files 
+Remaining inside the recipe app directory, build the react files.
 ```
 npm run build
-cd ..
 ```
 ### 5. Install Electron 
 After building the React Files, remaining inside the Busy-Bites-Electron-App directory and install Electron.
 ```
 npm install electron
 ```
-### 6. Create executable
-Inside the Busy-Bites-Electron-App directory, use npm make to create the executable. This step may take a while.
+### 7. Create the Executable
+Remaining inside the recipe-app directory, use npm make to create the executable. This step may take a while.
 ```
 npm run make
 ```
-
 ---
 
 # 🧑‍🍳 How to Use Busy Bites
@@ -209,6 +242,5 @@ Individual results of each recipe will vary. Once the application finish retriev
 - 📸 Home Screen photo by **Brooke Cagle** on **Unsplash**
 
 ## ✉️ Contact
-- 📧 Email: [Contact Me](KendariusJames@protonmail.com)
 - 🌐 Portfolio: [Kendarius James](https://kendarius-james.github.io/index.html)
 - 🐙 GitHub: [@kendarius-james](https://github.com/kendarius-james)
