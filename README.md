@@ -1,7 +1,7 @@
 # 🍽️ Busy Bites
 Busy Bites is a recipe search desktop application designed to search over 5000 recipes tailored to any lifestyle. Built using Electron, React and the Spoonacular api; this application can be run on any desktop computer making it a convenient way to search for your recipe needs. 
 
-<img width="900" height="600" alt="Busy Bites Home" src="https://github.com/user-attachments/assets/71216c36-80af-43f3-a289-b3f65fcd3c7e" />
+<img width="900" height="600" alt="Busy Bites Home" src="assets/Busy Bites Home.png" />
 
 ---
 
@@ -195,13 +195,13 @@ npm run make
 
 # 🧑‍🍳 How to Use Busy Bites
 ### 1. Go to Spoonacular Website and Create an Account
-<img width="900" height="600" alt="Spoonacular Dashboard" src="https://github.com/user-attachments/assets/64b3a4fe-9c3a-46c0-8ee7-809c3d5de8a9" />
+<img width="900" height="600" alt="Spoonacular Dashboard" src="assets/Spoonacular Dashboard.png" />
 
 
 ### Once you created your account, you will insert your api key in the field below and agree to the Terms of Service and Privacy Policy.
 
 
-<img width="900" height="700" alt="API Key Input" src="https://github.com/user-attachments/assets/5336b136-6c05-411a-9a98-d65d215f5550" />
+<img width="900" height="700" alt="API Key Input" src="assets/API Key Input.png" />
 
 ### 2. Filter by Recipe
 In the following fields below, filter by:
@@ -214,12 +214,12 @@ In the following fields below, filter by:
 
 All fields are required except Meal Name and Ingredients.
 
-<img width="900" height="600" alt="Busy Bites Filled" src="https://github.com/user-attachments/assets/55fd0af3-f090-4575-9db5-73e22b7ff1d0" />
+<img width="900" height="600" alt="Busy Bites Filled" src="assets/Busy Bites Filled.png" />
 
 ### 3. Select Your Chosen Recipe
 Once the search is complete, choose your desired recipe from the list.
 
-<img width="900" height="600" alt="Filtered Recipe Results" src="https://github.com/user-attachments/assets/3ca2a5ce-fad0-4e63-a52d-30519e687657" />
+<img width="900" height="600" alt="Filtered Recipe Results" src="assets/Filtered Recipe Results.png" />
 
 ### 4. Follow the Recipe
 Individual results of each recipe will vary. Once the application finish retrieving your chosen recipe, it will return:
@@ -229,11 +229,11 @@ Individual results of each recipe will vary. Once the application finish retriev
 - 📝 Ingredient list
 - 📖 Summary and cooking steps
 
-<img width="900" height="600" alt="Hamburger-Result-1" src="https://github.com/user-attachments/assets/15f35081-444c-4ead-86ef-3b539c6b5e3c" />
+<img width="900" height="600" alt="Hamburger-Result-1" src="assets/Hamburger-Result-1.png" />
 
-<img width="900" height="600" alt="Hamburger-Result-2" src="https://github.com/user-attachments/assets/4b7a785d-8c36-41cc-9fcb-18a14ca81093" />
+<img width="900" height="600" alt="Hamburger-Result-2" src="assets/Hamburger-Result-2.png" />
 
-<img width="900" height="600" alt="Hamburger-Result-3" src="https://github.com/user-attachments/assets/4d674031-7a20-4067-ba21-485c300ffee1" />
+<img width="900" height="600" alt="Hamburger-Result-3" src="assets/Hamburger-Result-3.png" />
 
 ---
 
